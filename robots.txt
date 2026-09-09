@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vincentnganga.github.io/sitemap.xml
+Sitemap: https://vincent-nga.github.io/sitemap.xml
