@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vincent Nganga — Portfolio</title>
+<meta name="description" content="Vincent Nganga — Computer Science student building practical tech for everyday problems.">
+<link rel="canonical" href="https://vincentnganga.github.io/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Vincent Nganga — Computer Science Student & Community Tech Builder">
+<meta property="og:description" content="Computer Science student building practical tech for everyday problems — AI, Python, web development, and community impact.">
+<meta property="og:url" content="https://vincentnganga.github.io/">
+<meta property="og:image" content="https://vincentnganga.github.io/assets/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vincent Nganga — Computer Science Student & Community Tech Builder">
+<meta name="twitter:description" content="Computer Science student building practical tech for everyday problems — AI, Python, web development, and community impact.">
+<meta name="twitter:image" content="https://vincentnganga.github.io/assets/profile.jpg">
+
+<!-- Structured data for search engines & AI systems -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vincent Nganga",
+  "url": "https://vincentnganga.github.io/",
+  "image": "https://vincentnganga.github.io/assets/profile.jpg",
+  "jobTitle": "Computer Science Student & Educator",
+  "description": "Computer Science student building practical tech for everyday problems, with a focus on AI, Python, web development, and community impact.",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Embu University"
+  },
+  "sameAs": [
+    "https://www.instagram.com/wilston_vinnys2",
+    "https://www.facebook.com/vinnys.vinnys.2025"
+  ],
+  "email": "mailto:vinnysvincent64@gmail.com"
+}
+</script>
+
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#171A21;
+    --ink-soft:#3A3F4B;
+    --paper:#F7F5EF;
+    --paper-2:#EDE9DD;
+    --forest:#2F5D46;
+    --forest-deep:#20402F;
+    --amber:#D69A3B;
+    --muted:#6B6F76;
+    --line:#DEDACB;
+    --max:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Lora',serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Space Grotesk',sans-serif;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  section{scroll-margin-top:84px;}
+  img{max-width:100%; display:block;}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,245,239,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .nav .brand{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700; font-size:1.05rem;
+    color:var(--forest-deep);
+    text-decoration:none;
+  }
+  .nav ul{
+    list-style:none; display:flex; gap:22px;
+    margin:0; padding:0; flex-wrap:wrap;
+  }
+  @media (max-width:480px){
+    .nav ul{gap:14px;}
+    .nav a.link{font-size:0.82rem;}
+    .nav .brand{font-size:0.95rem;}
+  }
+  .nav a.link{
+    text-decoration:none; font-family:'Space Grotesk',sans-serif;
+    font-size:0.92rem; font-weight:500; color:var(--ink-soft);
+    position:relative; padding-bottom:3px;
+  }
+  .nav a.link::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:2px;
+    background:var(--amber); transition:width .25s ease;
+  }
+  .nav a.link:hover::after{width:100%;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:96px 0 80px;
+    overflow:hidden;
+  }
+  .hero .dotgrid{
+    position:absolute; inset:0; z-index:0; opacity:0.5;
+    background-image:radial-gradient(var(--paper-2) 1.4px, transparent 1.4px);
+    background-size:22px 22px;
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+  }
+  .hero-inner{
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1.3fr 0.9fr; gap:56px; align-items:center;
+  }
+  .kicker{
+    display:inline-block; font-family:'Space Grotesk',sans-serif;
+    font-size:0.82rem; font-weight:600; color:var(--forest);
+    background:rgba(47,93,70,0.09); padding:5px 12px; border-radius:100px;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.2rem);
+    font-weight:700; line-height:1.1; margin:0 0 18px; color:var(--ink);
+  }
+  .hero h1 .accent{color:var(--forest);}
+  .hero p.lede{
+    font-size:1.12rem; color:var(--ink-soft); max-width:52ch; margin:0 0 32px;
+  }
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px;}
+  .btn{
+    font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.94rem;
+    text-decoration:none; padding:13px 24px; border-radius:8px; display:inline-block;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-primary{background:var(--forest); color:#fff;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(47,93,70,0.28);}
+  .btn-ghost{border:1.5px solid var(--ink); color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:#fff;}
+
+  .icon-row{display:flex; gap:14px;}
+  .icon-btn{
+    width:40px; height:40px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; border:1px solid var(--line); color:var(--ink);
+    transition:transform .18s ease, border-color .18s ease, color .18s ease;
+  }
+  .icon-btn:hover{transform:translateY(-3px); border-color:var(--forest); color:var(--forest);}
+  .icon-btn svg{width:18px; height:18px;}
+
+  .photo-frame{
+    position:relative; justify-self:center;
+  }
+  .photo-frame .ring{
+    position:absolute; inset:-14px; border:1.5px dashed var(--amber);
+    border-radius:50%; animation:spin 40s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .photo-frame img{
+    width:min(320px, 62vw); height:min(320px, 62vw); object-fit:cover;
+    border-radius:50%; border:6px solid #fff;
+    box-shadow:0 20px 40px rgba(23,26,33,0.16);
+  }
+
+  /* ---------- Section shell ---------- */
+  .section-head{margin-bottom:36px;}
+  .eyebrow{
+    font-family:'Space Grotesk',sans-serif; font-size:0.8rem; font-weight:600;
+    color:var(--amber); margin:0 0 8px;
+  }
+  h2.title{font-size:1.9rem; font-weight:700; margin:0; color:var(--ink);}
+
+  section.band{padding:76px 0;}
+  section.band.alt{background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  /* reveal on scroll — only hides content once JS confirms it can reveal it again */
+  .reveal{transition:opacity .6s ease, transform .6s ease;}
+  html.js .reveal{opacity:0; transform:translateY(18px);}
+  .reveal.visible{opacity:1 !important; transform:translateY(0) !important;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:start;}
+  .about-grid p{color:var(--ink-soft); margin:0 0 18px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .philosophy-card{
+    background:var(--paper-2); border-radius:16px; padding:28px 26px;
+    border-left:4px solid var(--forest);
+  }
+  .philosophy-card h3{margin:0 0 10px; font-size:1.05rem; color:var(--forest-deep);}
+  .philosophy-card p{font-size:0.96rem; color:var(--ink-soft); margin:0;}
+
+  /* ---------- Experience ---------- */
+  .timeline{border-left:2px solid var(--line); padding-left:28px; display:flex; flex-direction:column; gap:34px;}
+  .tl-item{position:relative;}
+  .tl-item::before{
+    content:""; position:absolute; left:-34px; top:4px; width:12px; height:12px;
+    border-radius:50%; background:var(--forest); border:3px solid var(--paper);
+    box-shadow:0 0 0 2px var(--forest);
+  }
+  .tl-item .when{font-family:'Space Grotesk',sans-serif; font-size:0.82rem; color:var(--amber); font-weight:600;}
+  .tl-item h3{margin:6px 0 4px; font-size:1.15rem;}
+  .tl-item .org{font-size:0.92rem; color:var(--muted); margin-bottom:10px; display:block;}
+  .tl-item ul{margin:8px 0 0; padding-left:18px; color:var(--ink-soft);}
+  .tl-item li{margin-bottom:5px; font-size:0.97rem;}
+
+  .skills-wrap{margin-top:48px;}
+  .skills-wrap h3{font-size:1.1rem; margin:0 0 16px;}
+  .pill-row{display:flex; flex-wrap:wrap; gap:10px;}
+  .pill{
+    font-family:'Space Grotesk',sans-serif; font-size:0.86rem; font-weight:500;
+    background:#fff; border:1px solid var(--line); color:var(--ink-soft);
+    padding:8px 16px; border-radius:100px;
+  }
+
+  /* ---------- Projects ---------- */
+  .project-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+  }
+  .p-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:26px; cursor:pointer; transition:transform .22s ease, box-shadow .22s ease;
+    display:flex; flex-direction:column; min-height:220px;
+  }
+  .p-card:hover{transform:translateY(-6px); box-shadow:0 16px 34px rgba(23,26,33,0.1);}
+  .p-card .tag{
+    font-family:'Space Grotesk',sans-serif; font-size:0.75rem; font-weight:600;
+    color:var(--forest); background:rgba(47,93,70,0.09);
+    padding:4px 10px; border-radius:100px; display:inline-block; margin-bottom:14px; width:fit-content;
+  }
+  .p-card h3{margin:0 0 8px; font-size:1.15rem;}
+  .p-card p{margin:0; font-size:0.94rem; color:var(--ink-soft); flex-grow:1;}
+  .p-card .expand{
+    margin-top:16px; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600;
+    color:var(--forest-deep); display:flex; align-items:center; gap:6px;
+  }
+  .p-card.soon{
+    cursor:default; border-style:dashed; background:transparent;
+  }
+  .p-card.soon:hover{transform:none; box-shadow:none;}
+  .p-card.soon .tag{color:var(--muted); background:var(--paper-2);}
+  .p-card.soon h3{color:var(--muted);}
+  .p-card.soon p{color:#9A9D9F;}
+
+  /* Modal */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(23,26,33,0.6);
+    display:none; align-items:center; justify-content:center; z-index:100; padding:20px;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:#fff; border-radius:18px; max-width:560px; width:100%;
+    padding:36px; position:relative; max-height:85vh; overflow-y:auto;
+  }
+  .modal h3{margin:0 0 6px; font-size:1.4rem;}
+  .modal .org{color:var(--muted); font-size:0.92rem; display:block; margin-bottom:16px;}
+  .modal ul{padding-left:18px; color:var(--ink-soft);}
+  .modal li{margin-bottom:8px;}
+  .modal-close{
+    position:absolute; top:18px; right:18px; width:34px; height:34px; border-radius:50%;
+    border:1px solid var(--line); background:#fff; cursor:pointer; font-size:1.1rem; color:var(--ink);
+  }
+
+  /* ---------- Contact / Footer ---------- */
+  footer{
+    background:var(--ink); color:#E7E5DE; padding:64px 0 48px;
+  }
+  footer h2{color:#fff; font-size:1.8rem; margin:0 0 12px;}
+  footer p.sub{color:#B7B9BE; max-width:48ch; margin:0 0 32px;}
+  .contact-grid{display:flex; flex-wrap:wrap; gap:16px; align-items:center;}
+  .contact-pill{
+    display:flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14);
+    padding:11px 18px; border-radius:100px; text-decoration:none; color:#fff;
+    font-family:'Space Grotesk',sans-serif; font-size:0.9rem; font-weight:500;
+    transition:background .2s ease, border-color .2s ease;
+  }
+  .contact-pill:hover{background:rgba(214,154,59,0.16); border-color:var(--amber);}
+  .contact-pill svg{width:18px; height:18px; flex-shrink:0;}
+  footer .foot-note{margin-top:40px; font-size:0.82rem; color:#7D7F84;}
+
+  @media (max-width:820px){
+    .hero-inner{grid-template-columns:1fr; text-align:left;}
+    .photo-frame{justify-self:start; margin-top:8px;}
+    .about-grid{grid-template-columns:1fr;}
+    .project-grid{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    .photo-frame .ring{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="#top" class="brand">Vincent Nganga</a>
+      <ul>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#experience">Experience</a></li>
+        <li><a class="link" href="#projects">Projects</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="dotgrid"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <span class="kicker">Computer Science · AI &amp; Data · Community Tech</span>
+        <h1>Building practical tech for <span class="accent">everyday problems.</span></h1>
+        <p class="lede">I'm Vincent Nganga — a Computer Science student, teacher, and community organiser who believes the best technology is the kind that quietly makes someone's day easier. I build with AI, Python, and the web, and I'm always looking for the next small problem worth solving.</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="icon-row" aria-label="Social links">
+          <a class="icon-btn" href="https://www.instagram.com/wilston_vinnys2?stkn=N3RraWFyd2U4ZGxj" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a class="icon-btn" href="https://www.facebook.com/vinnys.vinnys.2025" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9h3V5.6C16.6 5.2 15.4 5 14.2 5 11.6 5 10 6.6 10 9.4V12H7v4h3v7h4v-7h3.1l.6-4H14V9.6c0-.5.2-.6.9-.6z" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="icon-btn" href="mailto:vinnysvincent64@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 6.5l8 6.2 8-6.2"/></svg>
+          </a>
+          <a class="icon-btn" href="tel:0794673206" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="photo-frame">
+        <div class="ring"></div>
+        <img src="assets/profile.jpg" alt="Portrait of Vincent Nganga">
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="band alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">My story</p>
+        <h2 class="title">From the classroom to the console</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>My interest in tech didn't start with a computer — it started with noticing problems. Teaching showed me how much time gets lost to repetitive, avoidable work: rewriting the same kind of exam, formatting the same kind of notes, chasing information that should've been one click away. Running a school journalism club showed me the same thing on a different scale — a small team can produce real, consistent work if the process around them is designed well.</p>
+          <p>Studying Computer Science gave me a way to actually build the fixes I kept imagining instead of just working around the problem. I'm particularly drawn to AI and data science, not as buzzwords, but as practical tools — the kind that can help a small community organisation understand its own data, or help a teacher spend less time on paperwork and more time teaching.</p>
+          <p>That's the thread running through everything I do: find a real, everyday problem — in a classroom, a club, a community — and build something small and useful that actually solves it.</p>
+        </div>
+        <div class="philosophy-card reveal">
+          <h3>How I think about tech &amp; community</h3>
+          <p>Most of the problems people deal with day to day aren't solved by cutting-edge research — they're solved by someone bothering to build the small, unglamorous tool that removes friction. A well-placed Python script, a simple web app, or a model that spots a pattern a person would've missed can save a school, a club, or a household real time and stress. I want to keep building things at that scale: practical, close to the ground, and genuinely useful to the people around me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="band">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experience</p>
+        <h2 class="title">Where I've put in the work</h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <span class="when">In progress</span>
+          <h3>BSc Computer Science</h3>
+          <span class="org">Embu University · 2nd Year</span>
+          <p style="margin:0; color:var(--ink-soft); font-size:0.97rem;">Coursework alongside a growing focus on AI, data science, and web development — building projects outside class whenever I can.</p>
+        </div>
+
+        <div class="tl-item">
+          <span class="when">Ongoing</span>
+          <h3>Founder &amp; Club Lead — The Orbit Eye</h3>
+          <span class="org">School Journalism Club, Orbit School of the Cross</span>
+          <ul>
+            <li>Launched the club from scratch and have led it since, recruiting and mentoring student journalists and officers.</li>
+            <li>Set an editorial standard of balanced, bias-free reporting, applied across every publication.</li>
+            <li>Built and maintained a consistent brand identity across all club materials.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <span class="when">Ongoing</span>
+          <h3>Teacher — Tr. Vincent</h3>
+          <span class="org">Orbit School of the Cross</span>
+          <ul>
+            <li>Design original curriculum materials — exam papers, marking schemes, and study notes — across science and religious education.</li>
+            <li>Translate complex topics into clear, classroom-ready content for students at multiple grade levels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills-wrap reveal">
+        <h3>Skills</h3>
+        <div class="pill-row">
+          <span class="pill">Artificial Intelligence</span>
+          <span class="pill">Python</span>
+          <span class="pill">Web Development</span>
+          <span class="pill">Data Science (learning)</span>
+          <span class="pill">Curriculum Design</span>
+          <span class="pill">Team Leadership</span>
+          <span class="pill">Editorial &amp; Content Standards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="band alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Projects</p>
+        <h2 class="title">Things I've built &amp; things brewing</h2>
+      </div>
+
+      <div class="project-grid reveal">
+        <div class="p-card" data-modal="orbit-eye">
+          <span class="tag">Community · Media</span>
+          <h3>The Orbit Eye</h3>
+          <p>A student journalism club I founded and lead — built from the ground up into a functioning newsroom with editorial standards, a publishing rhythm, and a recognisable brand.</p>
+          <span class="expand">View details →</span>
+        </div>
+
+        <div class="p-card soon">
+          <span class="tag">AI · Python</span>
+          <h3>Coming soon</h3>
+          <p>A new project is in the works. Check back soon for something built with AI and Python.</p>
+        </div>
+
+        <div class="p-card soon">
+          <span class="tag">Web Development</span>
+          <h3>Coming soon</h3>
+          <p>A web-based project is on the way. This space will be updated as it takes shape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="wrap">
+      <h2>Let's connect</h2>
+      <p class="sub">Open to conversations about AI, data science, teaching, or building tech for community impact.</p>
+      <div class="contact-grid">
+        <a class="contact-pill" href="mailto:vinnysvincent64@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 6.5l8 6.2 8-6.2"/></svg>
+          vinnysvincent64@gmail.com
+        </a>
+        <a class="contact-pill" href="tel:0794673206">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+          0794 673 206
+        </a>
+        <a class="contact-pill" href="https://www.instagram.com/wilston_vinnys2?stkn=N3RraWFyd2U4ZGxj" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a class="contact-pill" href="https://www.facebook.com/vinnys.vinnys.2025" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9h3V5.6C16.6 5.2 15.4 5 14.2 5 11.6 5 10 6.6 10 9.4V12H7v4h3v7h4v-7h3.1l.6-4H14V9.6c0-.5.2-.6.9-.6z" stroke-linejoin="round"/></svg>
+          Facebook
+        </a>
+      </div>
+      <p class="foot-note">© 2026 Vincent Nganga. Built with intent, one small problem at a time.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal (falls back to fully visible if IntersectionObserver isn't supported)
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('visible'));
+    } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+    }
+
+    // Project modal
+    const projectData = {
+      'orbit-eye': {
+        title: 'The Orbit Eye',
+        org: 'Student Journalism Club · Orbit School of the Cross',
+        body: `
+          <p>The Orbit Eye is a student journalism club I founded and have led from day one. What started as an idea to give students a real newsroom experience has grown into a consistent publication with its own editorial identity.</p>
+          <ul>
+            <li>Recruited and mentored a team of student journalists and officers, several of whom now lead their own coverage areas.</li>
+            <li>Set an editorial standard of balanced, bias-free reporting, and trained members to apply it consistently.</li>
+            <li>Coordinated a steady output of features, assembly reports, match reports, and event coverage.</li>
+            <li>Built and maintained a consistent brand identity across all club materials, giving the publication a professional, recognisable look.</li>
+          </ul>
+          <p>It's the project that taught me the most about leading a team, setting standards, and keeping something running without losing quality — lessons I now bring into how I approach building software.</p>
+        `
+      }
+    };
+
+    const overlay = document.getElementById('modal-overlay');
+    const modalBody = document.getElementById('modal-body');
+    document.querySelectorAll('.p-card[data-modal]').forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-modal');
+        const data = projectData[key];
+        if (!data) return;
+        modalBody.innerHTML = `<h3>${data.title}</h3><span class="org">${data.org}</span>${data.body}`;
+        overlay.classList.add('open');
+      });
+    });
+    document.getElementById('modal-close').addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+  </script>
+
+</body>
+</html>
